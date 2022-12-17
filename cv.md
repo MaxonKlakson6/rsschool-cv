@@ -1,6 +1,6 @@
 # Mihalenko Maxim
 
-<img src="images/maxim.jpg" width="150px" alt="my photo">
+<img src="static/images/maxim.jpg" width="150px" alt="my photo">
 
 ### Contact:
 

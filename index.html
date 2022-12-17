@@ -6,9 +6,238 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="static/fonts/fonts.css">
     <title>CV</title>
 </head>
 <body>
+    <header class="heading">
+        <nav>
+            <ul class="links-list">
+                <li>
+                    <a href="#contacts" class="nav-link">Contacts</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link">About me</a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li>
+                    <a href="#code" class="nav-link">Code examples</a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li>
+                    <a href="#courses" class="nav-link">Courses</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1 class="name">Maxim Mihalenko</h1>
+            <h3>Frontend developer</h3>
+            <img src="static/images/maxim.jpg" alt="My photo" class="cv-photo">
+        </div>
+        <section id="contacts">
+            <h2>Contacts</h2>
+            <address>
+                <ul>
+                    <li>Email - mihalenko.maxim21@gmail.com</li>
+                    <li><a href="https://t.me/MihalenkoMaxim" class="contact-link">Telegram</a></li>
+                    <li><a href="https://www.linkedin.com/in/frontend-mihalenko/" class="contact-link">LinkedIn</a></li>
+                </ul>
+            </address>
+        </section>
+        <hr>
+        <section id="about">
+            <h2>About me</h2>
+            <p>
+                I have 1 year non-commercial experience in frontend. My main aim is developing in sphere that I chose and be professional.<br><br>
 
+                First time I learnt frontend on my own, then I went to course Frontend development in TeachMeSkills school. Over this time I've done many JS tasks and implemented a few projects such as responsive layout pages, React applications.<br><br>
+
+                Now I expand my knowledge via: reading books, articles, documentation, watching videos and to consolidate information I implement pet-projects.
+            </p>
+        </section>
+        <hr>
+        <section id="skills">
+            <h2>Hard Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS, SCSS, styled-components</li>
+                <li>JavaScript, TypeScript</li>
+                <li>React, Redux-toolkit, Formik</li>
+                <li>Axios, socket.io</li>
+                <li>Material UI, Chakra UI</li>
+                <li>git</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="code">
+            <h2>Code examples</h2>
+            <article>
+                <h3 class="code-description">It's Roman Numbers kata from codewars</h3>
+                <pre>
+                <code>
+ function solution(roman) {
+   let result = 0;
+   const romansNumbers = {
+     I: 1,
+     V: 5,
+     X: 10,
+     L: 50,
+     C: 100,
+     D: 500,
+     M: 1000,
+   };
+   for (let i = 0; i < roman.length; i++) {
+     if (romansNumbers[roman[i + 1]] > romansNumbers[roman[i]]) {
+       result -= romansNumbers[roman[i]];
+       continue;
+     }
+     result += romansNumbers[roman[i]];
+   }
+   return result;
+ }</code>
+            </pre>
+            </article>
+            <article>
+                <h3 class="code-description">It's Build Tower kata from codewars</h3>
+                <pre>
+                <code>
+ const towerBuilder = (nFloors) => {
+   const pyramid = new Array(nFloors);
+   const maxLength = nFloors * 2 - 1;
+   let start = 0;
+   let end = maxLength;
+
+   for(let i = 0; i < nFloors; i ++) {
+     pyramid[i] = [];
+     pyramid[i].length = maxLength;
+
+     for(let j = 0; j < pyramid[i].length; j++) {
+       if(j < start) {
+         pyramid[i][j] = ' ';
+         continue;
+       }
+
+       if(j >= end) {
+         pyramid[i][j] = ' ';
+         continue;
+       }
+       pyramid[i][j] = '*';
+     }
+     pyramid[i] = pyramid[i].join('');
+     start++;
+     end--;
+   }
+   return pyramid.reverse();
+ }</code>
+            </pre>
+            </article>
+        </section>
+        <hr>
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3 class="project-name-holder">
+                    <a href="https://github.com/MaxonKlakson6/online-store" target="_blank" class="project-name">Online-store</a>
+                </h3>
+                <p class="project-description">It's project that I've done as diploma on TeachMeSkills school. This project was implemented as full-stack application. Project includes all functional which necessary in online-stores.</p>
+                <span class="project-technologies">Used technologies:</span>
+                <pre>
+                    <code>
+ "dependencies": {
+     "@emotion/react": "^11.10.4",
+     "@emotion/styled": "^11.10.4",
+     "@mui/icons-material": "^5.10.6",
+     "@mui/material": "^5.10.5",
+     "@reduxjs/toolkit": "^1.8.5",
+     "@testing-library/jest-dom": "^5.16.5",
+     "@testing-library/react": "^13.4.0",
+     "@testing-library/user-event": "^14.4.3",
+     "@types/jest": "^27.5.2",
+     "@types/node": "^17.0.45",
+     "@types/react": "^18.0.20",
+     "@types/react-dom": "^18.0.6",
+     "axios": "^0.27.2",
+     "formik": "^2.2.9",
+     "lodash": "^4.17.21",
+     "moment": "^2.29.4",
+     "node-sass": "^7.0.3",
+     "react": "^18.2.0",
+     "react-dom": "^18.2.0",
+     "react-redux": "^8.0.2",
+     "react-router-dom": "^6.4.0",
+     "react-scripts": "5.0.1",
+     "react-toastify": "^9.0.8",
+     "redux-persist": "^6.0.0",
+     "reselect": "^4.1.6",
+     "typescript": "^4.8.3",
+     "web-vitals": "^2.1.4",
+     "yup": "^0.32.11"
+ },</code>
+                </pre>
+            </article>
+            <article>
+                <h3 class="project-name-holder">
+                    <a href="https://github.com/MaxonKlakson6/tic-tac-toe" target="_blank" class="project-name">Tic-tac-toe</a>
+                </h3>
+                <p class="project-description">It is full-stack application where you can play tic-tac-toe with other user. In this project I've also implemented backend.</p>
+                <span class="project-technologies">Used technologies:</span>
+                <pre>
+                    <code>
+ "dependencies": {
+     "@testing-library/jest-dom": "^5.16.5",
+     "@testing-library/react": "^13.4.0",
+     "@testing-library/user-event": "^13.5.0",
+     "@types/jest": "^27.5.2",
+     "@types/node": "^16.11.66",
+     "@types/react": "^18.0.21",
+     "@types/react-dom": "^18.0.6",
+     "history": "^5.3.0",
+     "lodash": "^4.17.21",
+     "react": "^18.2.0",
+     "react-dom": "^18.2.0",
+     "react-router-dom": "^6.4.2",
+     "react-scripts": "5.0.1",
+     "socket.io-client": "^4.5.3",
+     "typescript": "^4.8.4",
+     "web-vitals": "^2.1.4"
+ },</code>
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section id="courses">
+            <h2>Courses</h2>
+            <ul>
+                <li>TeachMeSkills frontend development - <time>March 2022 - October 2022</time></li>
+                <li>Underground English school - <time>March 2021 - January 2022</time></li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h2>Languages</h2>
+            <ul>
+                <li>English - A2</li>
+                <li>Russian - native</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <div>
+            <a href="https://github.com/MaxonKlakson6" target="_blank">
+                <img src="static/images/git-hub-logo.png" alt="github logo" class="git-logo" />
+            </a>
+            <span>2022</span>
+            <a href="https://rs.school/js/" target="_blank">
+                <img src="static/images/rs_school_js.svg" alt="rsschool logo">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
