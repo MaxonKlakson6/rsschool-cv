@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
@@ -93,7 +92,7 @@
      D: 500,
      M: 1000,
    };
-   for (let i = 0; i < roman.length; i++) {
+   for (let i = 0; i &lt; roman.length; i++) {
      if (romansNumbers[roman[i + 1]] > romansNumbers[roman[i]]) {
        result -= romansNumbers[roman[i]];
        continue;
@@ -114,12 +113,12 @@
    let start = 0;
    let end = maxLength;
 
-   for(let i = 0; i < nFloors; i ++) {
+   for(let i = 0; i &lt; nFloors; i ++) {
      pyramid[i] = [];
      pyramid[i].length = maxLength;
 
-     for(let j = 0; j < pyramid[i].length; j++) {
-       if(j < start) {
+     for(let j = 0; j &lt; pyramid[i].length; j++) {
+       if(j &lt; start) {
          pyramid[i][j] = ' ';
          continue;
        }
@@ -215,8 +214,8 @@
         <section id="courses">
             <h2>Courses</h2>
             <ul>
-                <li>TeachMeSkills frontend development - <time>March 2022 - October 2022</time></li>
-                <li>Underground English school - <time>March 2021 - January 2022</time></li>
+                <li>TeachMeSkills frontend development - March 2022 - October 2022</li>
+                <li>Underground English school - March 2021 - January 2022</li>
             </ul>
         </section>
         <hr>
@@ -231,7 +230,7 @@
     <footer class="footer">
         <div>
             <a href="https://github.com/MaxonKlakson6" target="_blank">
-                <img src="static/images/git-hub-logo.png" alt="github logo" class="git-logo" />
+                <img src="static/images/git-hub-logo.png" alt="github logo" class="git-logo">
             </a>
             <span>2022</span>
             <a href="https://rs.school/js/" target="_blank">
