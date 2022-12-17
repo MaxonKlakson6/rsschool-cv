@@ -1,0 +1,147 @@
+body {
+    background-color: #f8fcfc;
+}
+
+.heading {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.links-list {
+    height: 50px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 5px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #fff;
+}
+
+.nav-link:hover {
+    background-color: yellow;
+}
+
+.nav-link:active {
+    color: #a084ec;
+}
+
+main {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.name {
+    font-family: Poppins;
+}
+
+.cv-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.code-description {
+    margin: 20px 0 10px;
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.project-name-holder {
+    margin-top: 20px;
+}
+
+.project-name {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-name:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    margin-bottom: 10px;
+}
+
+.project-technologies {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer {
+    height: 100px;
+    background-color: #fff;
+}
+
+.git-logo {
+    width: 50px;
+}
+
+section {
+    margin-top: 30px;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid #888484;
+}
+
+section:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-family: Poppins;
+}
+
+h3 {
+    margin-bottom: 5px;
+    font-family: Poppins;
+}
+
+p, span {
+    font-family: Roboto;
+}
+
+ul li {
+    font-family: Nunito;
+}
+
+pre {
+    background-color: #181c24;
+    color: #c9d1d9;
+    border-radius: 5px;
+}
+
+footer div {
+    max-width: 700px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
